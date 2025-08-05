@@ -1,3 +1,5 @@
+
+//Solution - 1
 // function PlusMinus(arr) {
 //   //Write code here
 //   let [pos, neg, zer] = [0, 0, 0];
@@ -13,3 +15,31 @@
 // }
 
 // PlusMinus([3, -2, -1, 0, -3, 2]);
+
+//Solution -2 
+
+function plusMinus(arr) {
+  let minus = 0;
+  let plus = 0;
+  let zero = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      minus++;
+    }
+    if (arr[i] > 0) {
+      plus++;
+    }
+    if (arr[i] == 0) {
+      zero++;
+    }
+  }
+
+  const plusratio = plus / arr.length;
+  const minusratio = minus / arr.length;
+  const zeroration = zero / arr.length;
+
+  console.log(plusratio.toFixed(6));
+  console.log(minusratio.toFixed(6));
+  console.log(zeroration.toFixed(6));
+}
+plusMinus([3, -2, -1, 0, -3, 2]);
