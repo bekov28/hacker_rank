@@ -50,3 +50,17 @@
 //   sum += arr[i];
 // }
 // console.log(sum);
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+const maxNumber = Math.max(...arr);
+console.log(maxNumber);
+const minNumber = Math.min(...arr);
+console.log(minNumber);
+
+const totalSum = arr.reduce((acc, curr) => acc + curr, 0);
+console.log(totalSum);
+
+const maxDeducted = totalSum - maxNumber;
+const minDeducted = totalSum - minNumber;
+console.log(maxDeducted, minDeducted);
